@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<p>ALL CUSTOMISED FORM</p>
+  <%= render @company%>   <%# correpond to the partial companies.html.erb %>
+<% end %>
+
+<p>FINANCE CUSTOMISED FORM</p>
+  <%= render @finance_companies%>   <%# correpond to the partial companies.html.erb %>
+<% end %>
+
+<p>PRODUCTIVITY CUSTOMISED FORM</p>
+  <%= render @productivity_companies%>   <%# correpond to the partial companies.html.erb %>
+<% end %>
+
+<p>HIRING FORM</p>
+  <%= render @companies_hiring%>   <%# correpond to the partial companies.html.erb %>
+<% end %>
+
+
+<p>HIRING FORM</p>
+  <%= render @companies_hiring%>   <%# correpond to the partial companies.html.erb %>
+<% end %>
+
+
+<p>STANDARD FORM</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Industry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.name %></td>
+        <td><%= company.industry %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>

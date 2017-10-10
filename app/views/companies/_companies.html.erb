@@ -1,0 +1,10 @@
+<div>
+
+<strong><%= company.name%></strong>
+|
+<%= company.industry%>
+|
+<%= pluralize company.jobs.count, 'job' %>
+
+<%# There is no @ instance variable because there is no action here. Therefore %>
+</div>
